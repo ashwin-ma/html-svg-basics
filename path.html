@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Path</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        background: #eeeeee;
+        border: 2px solid grey;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <svg viewBox="0 0 100 100">
+        <g class="grid"></g>
+        <!-- <path d="M20,40 H80 V70 L20,70  Z" fill="none" stroke="blue"></path> -->
+        <!--  <path d="M10,50 C20,10 50,10 70,50" fill="none" stroke="blue"></path> -->
+        <!-- <path
+          d="M10,50 C20,80 40,80 50,50 S70,20 90,50"
+          fill="none"
+          stroke="blue"
+        ></path> -->
+        <!-- <path d="M10,50 Q30,30 50,50 T90,50" fill="none" stroke="blue"></path> -->
+        <path
+          d="M10,50 A50,30 0 0,1 90,50 V80 H10 Z"
+          fill="lightblue"
+          stroke="blue"
+        ></path>
+        <!-- A(x,y x-axis rotation large-arc-flag,sweep-flag) -->
+      </svg>
+    </div>
+  </body>
+</html>

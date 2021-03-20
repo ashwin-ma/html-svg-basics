@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Defs, Symbols and use</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        background: #eeeeee;
+        border: 2px solid grey;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+      }
+      .combine {
+        transform: rotate(70deg);
+        transform-origin: center;
+        stroke: blue;
+      }
+      .first {
+        stroke-dasharray: 2, 1;
+      }
+      .second {
+        stroke-dasharray: 5, 1, 2.5, 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <svg viewBox="0 0 100 100">
+        <g class="grid"></g>
+        <defs>
+          <g class="combine" id="shape">
+            <circle
+              class="circle"
+              cx="50"
+              cy="50"
+              r="30"
+              fill="orange"
+            ></circle>
+            <rect
+              class="rectangle"
+              x="40"
+              y="40"
+              width="20"
+              height="20"
+              fill="red"
+            ></rect>
+          </g>
+        </defs>
+        <use xlink:href="#shape" class="first" x="-35" y="20"></use>
+        <use xlink:href="#shape" class="second" x="35" y="20"></use>
+      </svg>
+    </div>
+  </body>
+</html>
